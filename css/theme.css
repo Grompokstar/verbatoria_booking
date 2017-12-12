@@ -1188,14 +1188,19 @@ header {
   border: 1px solid #d3d3d3;
   border-radius: 17px;
   font-size: 12px;
-  line-height: 37px;
+  line-height: 12px;
   color: #808080;
-  padding: 0 20px;
+  padding: 12px 20px 12px 77px;
   align-items: center;
   cursor: pointer;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden; }
   .booking-form .back-to-date-btn svg {
-    margin-right: 10px; }
+    position: absolute;
+    left: 17px;
+    top: 5px; }
 
 .date-place {
   font-size: 18px; }
@@ -1246,11 +1251,7 @@ header {
 
 @media (max-width: 499px) {
   .booking-form .back-to-date-btn {
-    padding: 0 12px;
-    font-size: 12px;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden; }
+    width: 100%; }
   .booking-form .total-price {
     display: flex; }
     .booking-form .total-price #total-price-output {
@@ -1497,7 +1498,7 @@ input.form-control {
     min-width: 145px;
     font-size: 14px;
     line-height: 14px;
-    padding: 8px 10px; }
+    padding: 8px 10px !important; }
 
   .ui.selection.dropdown .menu > .item {
     font-size: 14px; } }
