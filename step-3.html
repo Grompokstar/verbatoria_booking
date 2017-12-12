@@ -25,7 +25,7 @@
           </div>
 
           <div class="header-title mb-0">
-            Онлайн запись на сеанс
+            Онлайн запись <span class="mobile-hide">на сеанс</span>
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@
         <div class="form-group">
           <label><span class="strong">Номер телефона</span> <span class="font-sm">(обязательное поле)</span></label>
           <input type="text" class="form-control bold-font">
-          <div class="input-description">На этот номер вы получите SMS с адресом и временем приема.</div>
+          <div class="input-description mobile-hide">На этот номер вы получите SMS с адресом и временем приема.</div>
         </div>
         <div class="form-group">
           <label>Имя</label>
@@ -87,11 +87,11 @@
         <div class="form-group mb-3">
           <label>Email</label>
           <input type="text" class="form-control">
-          <div class="input-description">Email нужен для отправки вам результатов исследований, вы можете его записать во время приема.</div>
+          <div class="input-description mobile-hide">Email нужен для отправки вам результатов исследований, вы можете его записать во время приема.</div>
         </div>
 
         <div class="calc-price-row mb-4">
-          <div class="session-count">
+          <div class="session-count mobile-mb-24">
             <div class="font-lg">Количество сеансов</div>
             <div class="font-xs blue-color mb-2">(каждый второй сеанс со скидкой 60%)</div>
             <div class="session-count-control">
@@ -106,8 +106,10 @@
 
           </div>
           <div class="total-price">
-            <div class="font-lg">Общая стоимость</div>
-            <div class="font-xs gray-color mb-2">Оплата после приема</div>
+            <div>
+              <div class="font-lg">Общая стоимость</div>
+              <div class="font-xs gray-color mb-2">Оплата после приема</div>
+            </div>
             <div id="total-price-output"><span class="price">4900</span> <span class="measure">&#8381;</span></div>
           </div>
         </div>

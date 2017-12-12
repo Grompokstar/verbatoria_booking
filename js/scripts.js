@@ -58,12 +58,17 @@ $(function(){
 
     $('.ui.dropdown').dropdown();
 
-    $('.close-btn').on('click', function() {
+    $('.close-btn').on('click', function(e) {
       $('.content').addClass('close');
     });
 
     $('#exit').on('click', function() {
       $('.content').addClass('close');
+    });
+
+
+    $('.phone a').on('click', function(e) {
+      e.stopPropagation();
     });
 
 
@@ -84,6 +89,20 @@ $(function(){
 
     });
 
+    var activeIconView = $('.nav-icon .nav-item.active').attr('data-area');
+    $('.nav-view-area[data-target="' + activeIconView + '"]').show();
+
+    $('.nav-view .nav-icon').on('click', function() {
+
+      $('.nav-view .nav-icon').removeClass('active');
+      $(this).addClass('active');
+
+      activeIconView = $('.nav-view .nav-icon.active').attr('data-area');
+      $('.nav-view-area').hide();
+      $('.nav-view-area[data-target="' + activeIconView + '"]').show();
+
+    });
+
     //-----------------------------------------
 
 
@@ -96,7 +115,8 @@ $(function(){
       $('.filials-map .filial-card[data-card-id="' + cardId + '"]').toggle();
     });
 
-    $('.filial-card .close-icn').on('click', function() {
+    $('.filial-card .close-icn').on('click', function(e) {
+      e.stopPropagation();
       $(this).closest('.filial-card').hide();
     });
 

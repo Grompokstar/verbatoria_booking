@@ -722,8 +722,10 @@ body {
     bottom: 0;
     padding: 0; }
 
-.map-container img {
-  height: 100%; }
+.map-container {
+  background: url(../images/map-fake.png) no-repeat;
+  background-size: cover;
+  overflow: hidden; }
 
 .btn-back {
   width: 37px;
@@ -837,8 +839,50 @@ a {
 
 .btns-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between; }
 
+.inline-block {
+  display: inline-block; }
+
+.min-width-215 {
+  min-width: 215px !important; }
+
+.bg-white {
+  background-color: #fff; }
+
+.map-container {
+  height: 500px;
+  margin-left: -25px;
+  margin-right: -25px; }
+
+.no-shadow {
+  box-shadow: none; }
+
+@media (max-width: 499px) {
+  .mobile-hide {
+    display: none !important; }
+
+  .metro-circle {
+    margin: 0; }
+
+  .mobile-d-block {
+    display: block !important; }
+
+  .mobile-mb-11 {
+    margin-bottom: 11px; }
+
+  .mobile-mb-24 {
+    margin-bottom: 24px; }
+
+  .map-container {
+    height: 350px; }
+
+  .btns-row button {
+    width: 100% !important; } }
+@media (min-width: 500px) {
+  .desktop-hide {
+    display: none !important; } }
 .content {
   position: absolute;
   top: 0;
@@ -878,6 +922,8 @@ header {
     padding: 21px 25px; }
   header .address {
     margin-top: 7px; }
+  header .dropdown-block {
+    margin-right: 24px; }
 
 .close-btn {
   width: 36px;
@@ -896,12 +942,22 @@ header {
   display: inline-block;
   font-size: 18px;
   line-height: 19px;
-  font-family: "LatoBold", sans-serif;
-  margin-left: 24px; }
+  font-family: "LatoBold", sans-serif; }
   .header__phone a {
     color: #46c473;
     text-decoration: none; }
 
+@media (max-width: 499px) {
+  header .header-content {
+    padding: 15px 16px; }
+  header .close-btn {
+    top: 8px;
+    right: 8px; }
+
+  .header__phone {
+    font-size: 16px; }
+    .header__phone a {
+      text-decoration: underline; } }
 .filials .filial-control-row {
   margin-bottom: 17px; }
   .filials .filial-control-row .title {
@@ -933,6 +989,9 @@ header {
   .filials .filial-card .phone {
     font-size: 18px;
     margin-bottom: 13px; }
+    .filials .filial-card .phone a {
+      color: #000;
+      text-decoration: none; }
   .filials .filial-card .note {
     font-size: 12px;
     margin-bottom: 21px; }
@@ -981,6 +1040,24 @@ header {
         border-radius: 13px;
         color: #46c473;
         background-color: #fff; }
+    .filials .filial-control-row .nav-view .nav-icon {
+      width: 42px;
+      height: 42px;
+      border: 1px solid #d3d3d3;
+      border-radius: 50%;
+      background: transparent;
+      margin: 0 5px;
+      position: relative;
+      top: -10px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .filials .filial-control-row .nav-view .nav-icon svg {
+        opacity: 0.5; }
+      .filials .filial-control-row .nav-view .nav-icon.active {
+        background-color: #fff; }
+        .filials .filial-control-row .nav-view .nav-icon.active svg {
+          opacity: 1; }
 .filials .filials-map {
   position: absolute;
   top: 175px;
@@ -1013,6 +1090,70 @@ header {
   left: 40%;
   cursor: pointer; }
 
+@media (max-width: 499px) {
+  .filials .filial-control-row {
+    margin-bottom: 0; }
+  .filials .filial-card {
+    margin-left: -25px;
+    margin-right: -25px;
+    border-radius: 0; }
+    .filials .filial-card .metro-station {
+      padding-right: 50px; }
+    .filials .filial-card .phone {
+      font-size: 16px;
+      margin-bottom: 9px; }
+      .filials .filial-card .phone a {
+        color: #46c473;
+        text-decoration: underline;
+        font-family: "LatoBold", sans-serif; }
+    .filials .filial-card .note {
+      margin-bottom: 0; }
+    .filials .filial-card .fast-booking {
+      background-color: #fff;
+      padding-right: 20px; }
+      .filials .filial-card .fast-booking .text {
+        padding-right: 0; }
+      .filials .filial-card .fast-booking .booking-btn {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-top: 6px; }
+  .filials .filials-map .filial-card {
+    border-radius: 0;
+    padding-top: 6px;
+    padding-left: 17px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%; }
+    .filials .filials-map .filial-card .metro-station {
+      padding-right: 50px; }
+    .filials .filials-map .filial-card .phone {
+      font-size: 16px;
+      margin-bottom: 9px; }
+      .filials .filials-map .filial-card .phone a {
+        color: #46c473;
+        text-decoration: underline; }
+    .filials .filials-map .filial-card .note {
+      margin-bottom: 0; }
+    .filials .filials-map .filial-card .close-icn {
+      width: 32px;
+      height: 32px;
+      top: -40px;
+      left: 90%;
+      background-color: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .filials .filials-map .filial-card .fast-booking {
+      background-color: #fff; }
+      .filials .filials-map .filial-card .fast-booking .text {
+        padding-right: 0; }
+      .filials .filials-map .filial-card .fast-booking .booking-btn {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-top: 6px; } }
 .choose-date-top-row {
   display: flex;
   align-items: center;
@@ -1049,6 +1190,7 @@ header {
 
 .calc-price-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between; }
 
 .session-count-control {
@@ -1090,6 +1232,15 @@ header {
   font-size: 32px;
   color: #46c473; }
 
+@media (max-width: 499px) {
+  .booking-form .back-to-date-btn {
+    padding: 0 12px;
+    font-size: 10px; }
+  .booking-form .total-price {
+    display: flex; }
+    .booking-form .total-price #total-price-output {
+      margin-left: 10px;
+      font-size: 30px; } }
 input.form-control {
   display: block;
   width: 100%;
@@ -1255,6 +1406,17 @@ input.form-control {
       color: #c0c0c0;
       cursor: default; }
 
+@media (max-width: 499px) {
+  #time-slots .time-slot-item {
+    width: 88px;
+    margin-right: 7px; }
+    #time-slots .time-slot-item:after {
+      display: none; }
+
+  .js_cal td.active {
+    font-size: 20px; }
+    .js_cal td.active .month-name {
+      font-size: 7px; } }
 .ui.selection.dropdown {
   height: 30px;
   min-height: 30px;
@@ -1262,7 +1424,8 @@ input.form-control {
   border-radius: 6px;
   padding: 7px 10px;
   font-size: 18px;
-  font-family: "LatoBold", sans-serif; }
+  font-family: "LatoBold", sans-serif;
+  min-width: 200px; }
 
 .ui.selection.dropdown:focus {
   border-color: #d3d3d3;
@@ -1288,5 +1451,13 @@ input.form-control {
   position: absolute;
   top: 4px;
   right: 10px; }
+
+@media (max-width: 499px) {
+  .ui.selection.dropdown {
+    min-width: 145px;
+    font-size: 16px; }
+
+  .ui.selection.dropdown .menu > .item {
+    font-size: 16px; } }
 
 /*# sourceMappingURL=theme.css.map */

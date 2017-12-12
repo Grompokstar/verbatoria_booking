@@ -43,6 +43,11 @@
     .phone {
       font-size: 18px;
       margin-bottom: 13px;
+
+      a {
+        color: #000;
+        text-decoration: none;
+      }
     }
 
     .note {
@@ -111,6 +116,32 @@
           background-color: #fff;
         }
       }
+
+      .nav-icon {
+        width: 42px;
+        height: 42px;
+        border: 1px solid #d3d3d3;
+        border-radius: 50%;
+        background: transparent;
+        margin: 0 5px;
+        position: relative;
+        top: -10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          opacity: 0.5;
+        }
+
+        &.active {
+          background-color: #fff;
+
+          svg {
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 
@@ -158,4 +189,112 @@
     cursor: pointer;
 
   }
+}
+
+@media (max-width: 499px) {
+  .filials {
+    .filial-control-row {
+      margin-bottom: 0;
+    }
+
+    .filial-card {
+      margin-left: -25px;
+      margin-right: -25px;
+      border-radius: 0;
+
+      .metro-station {
+        padding-right: 50px;
+      }
+
+      .phone {
+        font-size: 16px;
+        margin-bottom: 9px;
+
+        a {
+          color: $brand-color;
+          text-decoration: underline;
+          font-family: "LatoBold", sans-serif;
+        }
+      }
+
+      .note {
+        margin-bottom: 0;
+      }
+
+      .fast-booking {
+        background-color: #fff;
+        padding-right: 20px;
+
+        .text {
+          padding-right: 0;
+        }
+
+        .booking-btn {
+          position: relative;
+          top: 0;
+          right: 0;
+          margin-top: 6px;
+        }
+      }
+
+    }
+
+    .filials-map {
+      .filial-card {
+        border-radius: 0;
+        padding-top: 6px;
+        padding-left: 17px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+
+        .metro-station {
+          padding-right: 50px;
+        }
+
+        .phone {
+          font-size: 16px;
+          margin-bottom: 9px;
+
+          a {
+            color: $brand-color;
+            text-decoration: underline;
+          }
+        }
+
+        .note {
+          margin-bottom: 0;
+        }
+
+        .close-icn {
+          width: 32px;
+          height: 32px;
+          top: - 40px;
+          left: 90%;
+          background-color: #fff;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .fast-booking {
+          background-color: #fff;
+
+          .text {
+            padding-right: 0;
+          }
+
+          .booking-btn {
+            position: relative;
+            top: 0;
+            right: 0;
+            margin-top: 6px;
+          }
+        }
+
+      }
+    }
+  }
+
 }

@@ -25,6 +25,10 @@ header {
     margin-top: 7px;
   }
 
+  .dropdown-block {
+    margin-right: 24px;
+  }
+
 }
 
 .close-btn {
@@ -48,10 +52,31 @@ header {
   font-size: 18px;
   line-height: 19px;
   font-family: "LatoBold", sans-serif;
-  margin-left: 24px;
 
   a {
     color: $brand-color;
     text-decoration: none;
+  }
+}
+
+@media (max-width: 499px) {
+  header {
+    .header-content {
+      padding: 15px 16px;
+    }
+
+    .close-btn {
+      top: 8px;
+      right: 8px;
+    }
+
+  }
+
+  .header__phone {
+    font-size: 16px;
+
+    a {
+      text-decoration: underline;
+    }
   }
 }

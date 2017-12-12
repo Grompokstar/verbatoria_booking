@@ -173,3 +173,26 @@
     }
   }
 }
+
+
+@media (max-width: 499px) {
+  #time-slots {
+    .time-slot-item {
+      width: 88px;
+      margin-right: 7px;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  .js_cal td.active {
+    font-size: 20px;
+
+    .month-name {
+      font-size: 7px;
+    }
+  }
+
+}

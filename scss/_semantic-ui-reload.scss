@@ -6,6 +6,7 @@
   padding: 7px 10px;
   font-size: 18px;
   font-family: "LatoBold", sans-serif;
+  min-width: 200px;
 }
 
 
@@ -38,4 +39,15 @@
   position: absolute;
   top: 4px;
   right: 10px;
+}
+
+@media (max-width: 499px) {
+  .ui.selection.dropdown {
+    min-width: 145px;
+    font-size: 16px;
+  }
+
+  .ui.selection.dropdown .menu>.item {
+    font-size: 16px;
+  }
 }
