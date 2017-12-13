@@ -1385,14 +1385,14 @@ select.form-control {
   border-radius: 13px;
   background-color: #fff;
   color: #46c473;
-  margin-left: 48px;
+  margin-left: 64px;
   position: relative;
   top: -12px;
   border-color: #46c473;
   text-transform: uppercase;
   font-size: 14px;
-  line-height: 14px;
-  padding: 2px 10px; }
+  line-height: 14px !important;
+  padding: 4px 10px; }
 
 .month-control {
   position: relative;
@@ -1538,6 +1538,10 @@ select.form-control {
       cursor: default; }
 
 @media (max-width: 499px) {
+  #datepicker {
+    margin-left: -16px;
+    margin-right: -25px; }
+
   #time-slots {
     display: flex;
     justify-content: space-between;
